@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Meta Data -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visual</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!-- Stlylesheet -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="css/font-awesome/css/font-awesome.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/no-ui-slider/jquery.nouislider.css" type="text/css" />
+
+<!-- Skin Color -->
+<link rel="stylesheet" href="css/colors/green.css" id="color-skins"/>
+<style type="text/css">
+	.img-container{
+		max-width: 250px;
+	}
+	img{
+		width: 90%
+	}
+</style>
+</head>
+<body>
+	   <!-- Start Team Section -->
+	   <section id="team">
+		<div class="container">
+		   <div class="col-md-12 text-center wow fadeInUp">
+			  <h3 class="section-title">Meet the Crew.</h3>
+			  <p class="subheading">Interdisciplinary team with <span class="highlight">big ideas</span> and challenges.</p>
+		   </div>
+		   <div class="row">
+			<% students.forEach((student) => { %>
+			  <div class="col-md-3 col-sm-3 team-member">
+				 <div class="effect effects wow fadeInUp">
+					<div class="img">
+						<img id="profile_pic" src="<%= student.image_link %> ">						
+						<div class="overlay">
+						  <ul class="expand">
+							 <li class="social-icon">
+								<a href="#" onClick="return false;">
+								   <i class="icon-social-facebook"></i>
+								</a>
+							 </li>
+							 <li class="social-icon">
+								<a href="#" onClick="return false;">
+								   <i class="icon-social-twitter"></i>
+								</a>
+							 </li>
+							 <li class="social-icon">
+								<a href="#" onClick="return false;">
+								   <i class=" icon-envelope-open"></i>
+								</a>
+							 </li>
+						  </ul>
+						  <a class="close-overlay hidden">
+							 x
+						  </a>
+					   </div>
+					</div>
+				 </div>
+				 <div class="member-info wow fadeInUp">
+					<a href="/students/<%= student._id %> ">
+					<h4><%= student.name %>  <%= student.surname %>  </h4>
+					<h5 class="highlight"><%= student.department %> </h5>
+					<p> <%= student.category %>  </p>
+				</a>
+				 </div>
+			  </div>
+			  <% })  %>
+			  </div>
+		   </div>
+		</div>
+	 </section>
+</body>
+</html>
