@@ -5,14 +5,13 @@ const student_schema = new mongoose.Schema ({
     id:mongoose.Schema.Types.ObjectId,
     name:String,
     surname: String,
-    email: String,
+    age: Number,
     university: String,
     department: String,
     no:Number,
-    category: String,
+    city: String,
     gender: String,
-    image_link: String,
-
+    avatar: String,
 });
 
 student_schema.index({

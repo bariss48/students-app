@@ -1,23 +1,36 @@
 const express = require('express');
 const router = express.Router();
 const student = require('../models/student');
+const multer = require('multer');
+const fileStorageEngine = multer.diskStorage ({
+    destination: (req, file, cb) => {
+        cb(null, './uploads');
+    },
+    filename: function (req, file , callback) {
+        callback(null, Date.now() + "-" + file.originalname);
+    }
+   });    
+
+const upload = multer({storage: fileStorageEngine});
+
+router.use(express.static('uploads'));
 
 router.get("/", async (req,res) => {    
     const students = await student.find().exec();
     res.render("students",{students});
 })
 
-router.post('/',async (req,res) => {
+router.post('/',upload.single('avatar'), async (req,res) => {
     const newStudent = {
         name: req.body.name,
         surname: req.body.surname,
-        email: req.body.email,
         university: req.body.university,
         department: req.body.department,
         no:req.body.no,
-        category: req.body.category,
+        age: req.body.age,
+        city: req.body.city,
         gender: req.body.gender,
-        image_link: req.body.image_link,
+        avatar: req.file.filename,
   }
     try {
       const students = await student.create(newStudent);
