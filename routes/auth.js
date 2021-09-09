@@ -12,9 +12,9 @@ router.post('/signup', async (req, res) => {
     try{
         if (req.body.age >= 18) {
         const newUser = await User.register(new User({
-        age: req.body.age,   
-        username: req.body.username,  
         email: req.body.email,  
+        username: req.body.username,  
+        age: req.body.age,
        }), req.body.password);
        }else{
            res.redirect('/signup');

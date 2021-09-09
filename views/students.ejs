@@ -1,81 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Visual</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	
-	<!-- Stlylesheet -->
-	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" type="text/css" />
-	<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.css" type="text/css" />
-	<link rel="stylesheet" href="/css/style.css" type="text/css" />
-	<link rel="stylesheet" href="/css/no-ui-slider/jquery.nouislider.css" type="text/css" />
-	
-	<!-- Skin Color -->
-	<link rel="stylesheet" href="/css/colors/green.css" id="color-skins"/>
-<!-- Skin Color -->
-<link rel="stylesheet" href="/css/colors/green.css" id="color-skins"/>
-<style type="/text/css">
-	.img-container{
-		max-width: 250px;
-	}
-	img{
-		width: 90%
-	}
-</style>
-</head>
-<body>
-	   <!-- Start Team Section -->
-	   <section id="team">
-		<div class="container">
-		   <div class="col-md-12 text-center wow fadeInUp">
-			  <h3 class="section-title">Meet the Crew.</h3>
-			  <p class="subheading">Interdisciplinary team with <span class="highlight">big ideas</span> and challenges.</p>
-		   </div>
-		   <div class="row">
-			<% students.forEach((student) => { %>
-			  <div class="col-md-3 col-sm-3 team-member">
-				 <div class="effect effects wow fadeInUp">
-					<div class="img">
-					 <img id="profile_pic" src="<%= student.avatar %> ">						
-						<div class="overlay">
-						  <ul class="expand">
-							 <li class="social-icon">
-								<a href="#" onClick="return false;">
-								   <i class="icon-social-facebook"></i>
-								</a>
-							 </li>
-							 <li class="social-icon">
-								<a href="#" onClick="return false;">
-								   <i class="icon-social-twitter"></i>
-								</a>
-							 </li>
-							 <li class="social-icon">
-								<a href="#" onClick="return false;">
-								   <i class=" icon-envelope-open"></i>
-								</a>
-							 </li>
-						  </ul>
-						  <a class="close-overlay hidden">
-							 x
-						  </a>
-					   </div>
-					</div>
-				 </div>
-				 <div class="member-info wow fadeInUp">
-					<a href="/students/<%= student._id %> ">
-					<h4><%= student.name %>  <%= student.surname %>  </h4>
-					<h5 class="highlight"><%= student.department %> </h5>
-					<p> <%= student.category %>  </p>
-				</a>
-				 </div>
+	<%-  include("partials/header")  %>  
+	   <!-- image search box -->
+	   <div class="box pt-6">
+		<div class="box-wrapper">
+			<div class=" bg-white rounded flex items-center w-full p-3 shadow-sm border border-blue-500">
+			  <button @click="getImages()" class="outline-none focus:outline-none"><svg class=" w-5 text-gray-600 h-5 cursor-pointer" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+			  <input type="search" name="" id="" @keydown.enter="getImages()" placeholder="search your classmates" x-model="q" class="w-full pl-4 text-sm outline-none focus:outline-none bg-transparent">
+			  <div class="select">
+				<select name="" id="" x-model="image_type" class="text-sm outline-none focus:outline-none bg-transparent">
+				  <option value="all" selected>All</option>
+				  <option value="photo">Photo</option>
+				  <option value="illustration">Illustration</option>
+				  <option value="vector">Vector</option>
+				 </select>
 			  </div>
-			  <% })  %>
-			  </div>
-		   </div>
+			</div>
+		  
 		</div>
-	 </section>
+	</div>
+    <br></br>
+	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
+        <% students.forEach((student) => { %>
+		<div class="flex flex-col items-center justify-center bg-blue-50 p-4 shadow rounded-lg">
+			<div class="inline-flex shadow-lg border border-blue-500 rounded-full overflow-hidden h-40 w-40">
+				<a href="/students/<%= student._id %>">
+				<img src=" <%= student.avatar %> "
+					 alt=""
+					 class="h-auto w-auto">
+				</a>
+			</div>
+			<h2 class="mt-4 font-bold text-xl"><%= student.name %> <%= student.surname %> </h2>
+			<h6 class="mt-2 text-blue-500 text-sm font-medium"> <%= student.department %> </h6>
+			<h6 class="mt-2 text-blue-800 text-sm font-medium"> <%= student.university %> </h6>
+			<p></p>
+			<a href="/students/<%= student._id %>" class="px-5 py-1 bg-blue-600 text-white rounded-full">Göz At</a>
+		</div>
+		<% }) %> 
+  </div>
 </body>
 </html>
