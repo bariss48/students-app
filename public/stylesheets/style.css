@@ -10113,6 +10113,18 @@ video {
           appearance: none;
 }
 
+.hover\:appearance-none:hover {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.focus\:appearance-none:focus {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 .auto-cols-auto {
   grid-auto-columns: auto;
 }
@@ -41352,6 +41364,18 @@ video {
             appearance: none;
   }
 
+  .sm\:hover\:appearance-none:hover {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+
+  .sm\:focus\:appearance-none:focus {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+
   .sm\:auto-cols-auto {
     grid-auto-columns: auto;
   }
@@ -72574,6 +72598,18 @@ video {
   }
 
   .md\:appearance-none {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+
+  .md\:hover\:appearance-none:hover {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+
+  .md\:focus\:appearance-none:focus {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
@@ -103806,6 +103842,18 @@ video {
             appearance: none;
   }
 
+  .lg\:hover\:appearance-none:hover {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+
+  .lg\:focus\:appearance-none:focus {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+
   .lg\:auto-cols-auto {
     grid-auto-columns: auto;
   }
@@ -135033,6 +135081,18 @@ video {
             appearance: none;
   }
 
+  .xl\:hover\:appearance-none:hover {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+
+  .xl\:focus\:appearance-none:focus {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+
   .xl\:auto-cols-auto {
     grid-auto-columns: auto;
   }
@@ -166255,6 +166315,18 @@ video {
   }
 
   .\32xl\:appearance-none {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+
+  .\32xl\:hover\:appearance-none:hover {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+
+  .\32xl\:focus\:appearance-none:focus {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;

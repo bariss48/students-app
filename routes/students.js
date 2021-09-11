@@ -30,6 +30,7 @@ router.post('/',upload.single('avatar'), async (req,res) => {
         age: req.body.age,
         city: req.body.city,
         gender: req.body.gender,
+        grade: req.body.grade,
         avatar: req.file.filename,
   }
     try {

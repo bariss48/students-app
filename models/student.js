@@ -10,6 +10,7 @@ const student_schema = new mongoose.Schema ({
     city: String,
     gender: String,
     avatar: String,
+    grade: String,
 });
 
 student_schema.index({
