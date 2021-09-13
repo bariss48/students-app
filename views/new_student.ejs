@@ -95,14 +95,13 @@
             </h1>
             <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
             </p>
-            <form class="w-full max-w-lg">
+            <form class="w-full max-w-lg" action="/students" method="POST" enctype="multipart/form-data">
               <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                   <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     First Name
                   </label>
-                  <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Baris" name="name">
-                  <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+                  <input class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Baris" name="name">
                 </div>
                 <div class="w-full md:w-1/2 px-3">
                   <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
@@ -114,14 +113,22 @@
                   <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     School Number
                   </label>
-                  <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="Number" placeholder="18253007" name="no">
-                  <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+                  <input class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="Number" placeholder="18253007" name="no">
                 </div>
                 <div class="w-full md:w-1/2 px-3">
                   <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                    Last Name
+                    Grade
                   </label>
-                  <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe" name="surname">
+                  <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state" name="grade">
+                     <option disabled selected>Şuanki Sınıfınız</option> 
+                     <option value="1.Sınıf">1.Sınıf</option>
+                     <option value="2.Sınıf">2.Sınıf</option>
+                     <option value="3.Sınıf">3.Sınıf</option>
+                     <option value="4.Sınıf">4.Sınıf</option>
+                     <option value="5.Sınıf">5.Sınıf</option>
+                     <option value="6.Sınıf">6.Sınıf</option>
+                     <option value="Mezun">Mezun</option>
+                  </select>
                 </div>
               </div>
               <div class="flex flex-wrap -mx-3 mb-6">
@@ -329,62 +336,62 @@
               <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full px-3">
                   <div class="relative">
-                    <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state" name="university">
-                      <option disabled selected>Kayıtlı Olduğunuz Üniversite</option>
-                     <option value="Abant İzzet Baysal Üniversitesi">Abant İzzet Baysal Üniversitesi</option>
-                     <option value="Abdullah Gül Üniversitesi">Abdullah Gül Üniversitesi</option>
-                     <option value="Acıbadem Üniversitesi">Acıbadem Üniversitesi</option>
-                     <option value="Adana Bilim ve Teknoloji Üniversitesi">Adana Bilim ve Teknoloji Üniversitesi</option>
-                     <option value="Adnan Menderes Üniversitesi">Adnan Menderes Üniversitesi</option>
-                     <option value="Adıyaman Üniversitesi">Adıyaman Üniversitesi</option>
-                     <option value="Afyon Kocatepe Üniversitesi">Afyon Kocatepe Üniversitesi</option>
-                     <option value="Ahi Evran Üniversitesi">Ahi Evran Üniversitesi</option>
-                     <option value="Akdeniz Üniversitesi">Akdeniz Üniversitesi</option>
-                     <option value="Akev Üniversitesi">Akev Üniversitesi</option>
-                     <option value="Aksaray Üniversitesi">Aksaray Üniversitesi</option>
-                     <option value="Alanya Alaaddin Keykubat Üniversitesi">Alanya Alaaddin Keykubat Üniversitesi</option>
-                     <option value="Alanya Hamdullah Emin Paşa Üniversitesi">Alanya Hamdullah Emin Paşa Üniversitesi</option>
-                     <option value="Amasya Üniversitesi">Amasya Üniversitesi</option>
-                     <option value="Anadolu Üniversitesi">Anadolu Üniversitesi</option>
-                     <option value="Anka Teknoloji Üniversitesi">Anka Teknoloji Üniversitesi</option>
-                     <option value="Ankara Sosyal Bilimler Üniversitesi">Ankara Sosyal Bilimler Üniversitesi</option>
-                     <option value="Ankara Üniversitesi">Ankara Üniversitesi</option>
-                     <option value="Ardahan Üniversitesi">Ardahan Üniversitesi</option>
-                     <option value="Artvin Çoruh Üniversitesi">Artvin Çoruh Üniversitesi</option>
-                     <option value="Atatürk Üniversitesi">Atatürk Üniversitesi</option>
-                     <option value="Atılım Üniversitesi">Atılım Üniversitesi</option>
-                     <option value="Avrasya Üniversitesi">Avrasya Üniversitesi</option>
-                     <option value="Ağrı İbrahim Çeçen Üniversitesi">Ağrı İbrahim Çeçen Üniversitesi</option>
-                     <option value="Bahçeşehir Üniversitesi">Bahçeşehir Üniversitesi</option>
-                     <option value="Balıkesir Üniversitesi">Balıkesir Üniversitesi</option>
-                     <option value="Bandırma Onyedi Eylül Üniversitesi">Bandırma Onyedi Eylül Üniversitesi</option>
-                     <option value="Bartın Üniversitesi">Bartın Üniversitesi</option>
-                     <option value="Batman Üniversitesi">Batman Üniversitesi</option>
-                     <option value="Bayburt Üniversitesi">Bayburt Üniversitesi</option>
-                     <option value="Başkent Üniversitesi">Başkent Üniversitesi</option>
-                     <option value="Beykent Üniversitesi">Beykent Üniversitesi</option>
-                     <option value="Bezmiâlem Vakıf Üniversitesi">Bezmiâlem Vakıf Üniversitesi</option>
-                     <option value="Bilecik Şeyh Edebali Üniversitesi">Bilecik Şeyh Edebali Üniversitesi</option>
-                     <option value="Bilkent Üniversitesi">Bilkent Üniversitesi</option>
-                     <option value="Bingöl Üniversitesi">Bingöl Üniversitesi</option>
-                     <option value="Biruni Üniversitesi">Biruni Üniversitesi</option>
-                     <option value="Bitlis Eren Üniversitesi">Bitlis Eren Üniversitesi</option>
-                     <option value="Bozok Üniversitesi">Bozok Üniversitesi</option>
-                     <option value="Boğaziçi Üniversitesi">Boğaziçi Üniversitesi</option>
-                     <option value="Bursa Orhangazi Üniversitesi">Bursa Orhangazi Üniversitesi</option>
-                     <option value="Bursa Teknik Üniversitesi">Bursa Teknik Üniversitesi</option>
-                     <option value="Bülent Ecevit Üniversitesi">Bülent Ecevit Üniversitesi</option>
-                     <option value="Canik Başarı Üniversitesi">Canik Başarı Üniversitesi</option>
-                     <option value="Celal Bayar Üniversitesi">Celal Bayar Üniversitesi</option>
+                    <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state" name="department">
+                      <option disabled selected>Kayıtlı Olduğunuz Bölüm</option>
+                     <option value="Abant İzzet Baysal Üniversitesi">Acil Yardım ve Afet Yönetimi</option>
+                     <option value="Abdullah Gül Üniversitesi">Adli Bilimler</option>
+                     <option value="Acıbadem Üniversitesi">Adli Bilişim Mühendisliği</option>
+                     <option value="Adana Bilim ve Teknoloji Üniversitesi">Ağaç İşleri Endüstri Mühendisliği</option>
+                     <option value="Adnan Menderes Üniversitesi">Aile ve Tüketici Bilimleri</option>
+                     <option value="Adıyaman Üniversitesi">Aile ve Tüketici Bilimleri</option>
+                     <option value="Afyon Kocatepe Üniversitesi">Aktüerya/Aktüerya Bilimleri</option>
+                     <option value="Ahi Evran Üniversitesi">Alman Dili ve Edebiyatı</option>
+                     <option value="Akdeniz Üniversitesi">Almanca Öğretmenliği</option>
+                     <option value="Akev Üniversitesi">Amerikan Kültürü ve Edebiyatı</option>
+                     <option value="Aksaray Üniversitesi">Antrenörlük Eğitimi</option>
+                     <option value="Alanya Alaaddin Keykubat Üniversitesi">Antropoloji</option>
+                     <option value="Alanya Hamdullah Emin Paşa Üniversitesi">Arap Dili ve Edebiyatı</option>
+                     <option value="Amasya Üniversitesi">Arapça Mütercim ve Tercümanlık</option>
+                     <option value="Anadolu Üniversitesi">Arapça Öğretmenliği</option>
+                     <option value="Anka Teknoloji Üniversitesi">Arkeoloji</option>
+                     <option value="Ankara Sosyal Bilimler Üniversitesi">Arkeoloji ve Sanat Tarihi </option>
+                     <option value="Ankara Üniversitesi">Arnavut Dili ve Edebiyatı</option>
+                     <option value="Ardahan Üniversitesi">Astronomi ve Uzay Bilimleri</option>
+                     <option value="Artvin Çoruh Üniversitesi">Ayakkabı Tasarımı ve Üretimi</option>
+                     <option value="Atatürk Üniversitesi">Azerbaycan Türkçesi ve Edebiyatı</option>
+                     <option value="Atılım Üniversitesi">Bahçe Bitkileri</option>
+                     <option value="Avrasya Üniversitesi">Balıkçılık Teknolojisi Mühendisliği</option>
+                     <option value="Ağrı İbrahim Çeçen Üniversitesi">Bankacılık</option>
+                     <option value="Bahçeşehir Üniversitesi">Bankacılık ve Finans</option>
+                     <option value="Balıkesir Üniversitesi">Basın ve Yayın</option>
+                     <option value="Bandırma Onyedi Eylül Üniversitesi">Beden Eğitimi ve Spor Öğretmenliği</option>
+                     <option value="Bartın Üniversitesi">Beslenme ve Diyetetik</option>
+                     <option value="Batman Üniversitesi">Bilgi ve Belge Yönetimi</option>
+                     <option value="Bilgisayar Mühendisliği">Bilgisayar Mühendisliği</option>
+                     <option value="Başkent Üniversitesi">Bilgisayar Teknolojisi ve Bilişim Sistemleri</option>
+                     <option value="Beykent Üniversitesi">Bilgisayar ve Öğretim Teknolojileri Öğretmenliği</option>
+                     <option value="Bezmiâlem Vakıf Üniversitesi">Bilim Tarihi</option>
+                     <option value="Bilecik Şeyh Edebali Üniversitesi">Bilişim Sistemleri Mühendisliği</option>
+                     <option value="Bilkent Üniversitesi">Bilişim Sistemleri ve Teknolojileri</option>
+                     <option value="Bingöl Üniversitesi">Bitki Koruma</option>
+                     <option value="Biruni Üniversitesi">Bitkisel Üretim ve Teknolojileri</option>
+                     <option value="Bitlis Eren Üniversitesi">Biyoenformatik ve Genetik</option>
+                     <option value="Bozok Üniversitesi">Biyokimya</option>
+                     <option value="Boğaziçi Üniversitesi">Biyoloji</option>
+                     <option value="Bursa Orhangazi Üniversitesi">Biyoloji Öğretmenliği</option>
+                     <option value="Bursa Teknik Üniversitesi">Biyomedikal Mühendisliği</option>
+                     <option value="Bülent Ecevit Üniversitesi">Biyomühendislik</option>
+                     <option value="Canik Başarı Üniversitesi">Biyosistem Mühendisliği</option>
+                     <option value="Celal Bayar Üniversitesi">Biyoteknoloji</option>
                      <option value="Cumhuriyet Üniversitesi">Cumhuriyet Üniversitesi</option>
-                     <option value="Çanakkale Onsekiz Mart Üniversitesi">Çanakkale Onsekiz Mart Üniversitesi</option>
-                     <option value="Çankaya Üniversitesi">Çankaya Üniversitesi</option>
-                     <option value="Çankırı Karatekin Üniversitesi">Çankırı Karatekin Üniversitesi</option>
-                     <option value="Çağ Üniversitesi">Çağ Üniversitesi</option>
-                     <option value="Çukurova Üniversitesi">Çukurova Üniversitesi</option>
-                     <option value="Deniz Harp Okulu">Deniz Harp Okulu</option>
-                     <option value="Dicle Üniversitesi">Dicle Üniversitesi</option>
-                     <option value="Dokuz Eylül Üniversitesi">Dokuz Eylül Üniversitesi</option>
+                     <option value="Çanakkale Onsekiz Mart Üniversitesi">Boşnak Dili ve Edebiyatı</option>
+                     <option value="Çankaya Üniversitesi">Bulgar Dili ve Edebiyatı</option>
+                     <option value="Çankırı Karatekin Üniversitesi">Bulgarca Mütercim ve Tercümanlık</option>
+                     <option value="Çağ Üniversitesi">Cevher Hazırlama Mühendisliği</option>
+                     <option value="Çukurova Üniversitesi">Coğrafya</option>
+                     <option value="Deniz Harp Okulu">Coğrafya Öğretmenliği</option>
+                     <option value="Dicle Üniversitesi">Çağdaş Türk Lehçeleri ve Edebiyatları</option>
+                     <option value="Dokuz Eylül Üniversitesi">Çağdaş Yunan Dili ve Edebiyatı</option>
                      <option value="Doğuş Üniversitesi">Doğuş Üniversitesi</option>
                      <option value="Dumlupınar Üniversitesi">Dumlupınar Üniversitesi</option>
                      <option value="Düzce Üniversitesi">Düzce Üniversitesi</option>
@@ -645,6 +652,24 @@
                   <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="90210">
                 </div>
               </div>
+                <label class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                    <span class="mt-2 text-base leading-normal">Select a profil picture</span>
+                    <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+                        <!-- Heroicon name: solid/lock-closed -->
+                      </span>
+                      <input type='file' class="" name="avatar"/>
+                    </button>
+                </label>
+               <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+                    <!-- Heroicon name: solid/lock-closed -->
+                    <svg class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                  Profili Tamamla
+                </button>
             </form>
          </main>
        </div>
