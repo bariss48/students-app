@@ -42,9 +42,9 @@ passport.use(new LocalStrategy(User.authenticate()));
 
 //using routes
 app.use('/',main_route);
+app.use('/',auth_route);
 app.use('/students',students_route);
 app.use('/profile',multer_route);
-app.use('/',auth_route);
 
 const PORT = process.env.PORT || 3000;
 
