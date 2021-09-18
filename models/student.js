@@ -11,6 +11,15 @@ const student_schema = new mongoose.Schema ({
     gender: String,
     avatar: String,
     grade: String,
+    age: Number,
+    email : String,
+    owner:{
+        id:{
+           type: mongoose.Schema.Types.ObjectId,
+           ref: "User" 
+        },
+        username: String
+   },
 });
 
 student_schema.index({

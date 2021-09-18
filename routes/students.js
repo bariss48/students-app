@@ -21,9 +21,11 @@ router.get("/", async (req,res) => {
 })
 
 router.post('/',upload.single('avatar'), async (req,res) => {
+    const name = req.body.name.toUpperCase();
+    const surname = req.body.surname.toUpperCase();
     const newStudent = {
-        name: req.body.name,
-        surname: req.body.surname,
+        name,
+        surname,
         university: req.body.university,
         department: req.body.department,
         no:req.body.no,
@@ -31,6 +33,7 @@ router.post('/',upload.single('avatar'), async (req,res) => {
         city: req.body.city,
         gender: req.body.gender,
         grade: req.body.grade,
+        email: req.body.email,
         avatar: req.file.filename,
   }
     try {
