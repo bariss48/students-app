@@ -18,6 +18,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const expressSession = require('express-session');
 const cookieParser = require('cookie-parser');
+const flash = require('connect-flash');
 
 dotenv.config({ path: './config/config.env' });
 connect_db();
@@ -32,6 +33,7 @@ app.use(expressSession({
     // using store session on MongoDB using express-session + connect
 }));
 app.use(methodOverride('_method'));
+app.use(flash());
 
 app.use(body_parser.urlencoded({ extended : true }));
 app.set("view engine","ejs");
@@ -47,6 +49,8 @@ passport.use(new LocalStrategy(User.authenticate()));
 
 app.use((req,res,next) => {
     res.locals.user = req.user;
+    res.locals.errorMessage = req.flash("error");
+    res.locals.successMessage = req.flash("success");
     next();
 });
 //using routes

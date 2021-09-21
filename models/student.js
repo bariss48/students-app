@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 const student_schema = new mongoose.Schema ({
-    id:mongoose.Schema.Types.ObjectId,
     name:String,
     surname: String,
     university: String,
@@ -13,6 +12,10 @@ const student_schema = new mongoose.Schema ({
     grade: String,
     age: Number,
     email : String,
+    instagram: String,
+    twitter: String,
+    linkedin: String,
+    description: String,
     owner:{
         id:{
            type: mongoose.Schema.Types.ObjectId,

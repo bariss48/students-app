@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/user');
 const passport = require('passport');
+const isLoggedIn = require('../utilites/isLoggedln');
 
 // rendering signup page
 router.get('/signup', (req,res) => {
@@ -37,10 +38,13 @@ router.get("/login", (req,res) => {
 router.post("/login", passport.authenticate('local', {
     successRedirect: '/students',
     failureRedirect: '/login',
+    successFlash: `Logged in successFully ! Welcome to app !`,
+    failureFlash: `Giriş Başarısız! Bir kez daha deneyiniz`,
 })); 
 // log-out
-router.get("/logout",(req,res) => {
+router.get("/logout",isLoggedIn,(req,res) => {
     req.logOut();
+    req.flash("success", `Logged Out! Goodßye !`);
     res.redirect('/');
 });
 
